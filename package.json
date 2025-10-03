@@ -1,0 +1,52 @@
+{
+  "name": "eslint-plugin-entered-modules",
+  "version": "0.1.0",
+  "description": "ESLint plugin to enforce modular architecture with entry point files",
+  "type": "module",
+  "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "watch": "tsc --watch",
+    "prepublishOnly": "npm run build"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE",
+    "CHANGELOG.md"
+  ],
+  "keywords": [
+    "eslint",
+    "eslintplugin",
+    "eslint-plugin",
+    "modules",
+    "entry-points",
+    "architecture",
+    "modular"
+  ],
+  "author": "Pawel Wojewoda",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/vidinity/eslint-plugin-entered-modules.git"
+  },
+  "homepage": "https://github.com/vidinity/eslint-plugin-entered-modules#readme",
+  "bugs": {
+    "url": "https://github.com/vidinity/eslint-plugin-entered-modules/issues"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  },
+  "peerDependencies": {
+    "eslint": ">=8.0.0"
+  },
+  "devDependencies": {
+    "@types/eslint": "^9.6.1",
+    "@types/node": "^22.10.5",
+    "eslint": "^9.18.0",
+    "typescript": "^5.7.3"
+  }
+}

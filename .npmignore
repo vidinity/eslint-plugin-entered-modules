@@ -1,0 +1,12 @@
+# Ignore everything by default
+*
+
+# Whitelist specific files/directories
+!dist/**
+!README.md
+!LICENSE
+!CHANGELOG.md
+!package.json
+
+# Ensure these are still ignored even if in dist/
+dist/**/*.map
