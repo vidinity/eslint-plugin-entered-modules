@@ -142,8 +142,6 @@ This plugin enforces a modular architecture pattern where:
 - Children modules can access parent internal APIs through special `entry..children` files.
 - All imports can only traverse exactly 1 directory segment (except sibling file imports).
 
-For more details on the modular architecture pattern, see the [architecture documentation](https://github.com/vidinity/eslint-plugin-entered-modules/blob/main/docs/modular-architecture.md).
-
 ## License
 
 MIT
