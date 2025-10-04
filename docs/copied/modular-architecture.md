@@ -68,8 +68,8 @@ import { serverAction } from '@/actions/entry.so'
 import { someIdentifier } from '@/some-module'
 ```
 
-> [!NOTE]
-> As of the time of writing, automated checks for these conventions are not implemented. One way to achieve this in the future would be through ESLint plugins. TODO: Edit this section once the checks are ready.
+> [!TIP]
+> Automated checks for these conventions are implemented via the [`eslint-plugin-entered-modules`](https://www.npmjs.com/package/eslint-plugin-entered-modules) ESLint plugin.
 
 ### Multiple entry point files
 
