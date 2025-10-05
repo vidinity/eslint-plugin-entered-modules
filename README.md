@@ -1,12 +1,17 @@
 # eslint-plugin-entered-modules
 
-ESLint plugin to enforce modular architecture with explicit entry point files.
+An ESLint plugin that enforces a modular architecture with explicit entry-point files.
 
 ## _Entered Modules_
 
-_Entered Modules_ is a concept used in some of our internal projects to describe special conventions on how the codebase should be separated into multiple modules and what `import`/`export` statements are permitted. For a comprehensive explanation, see the [original file](./docs/copied/modular-architecture.md) copied from one of the internal projects.
+_Entered Modules_ is a concept used in some of our internal projects to describe specific conventions for how the codebase should be divided into multiple modules and what kinds of `import`/`export` statements are permitted.
 
-An exemplary real snippet from the file `src/reader/Reader.tsx` (`@/reader` module)—there are no `index` files used:
+For a comprehensive explanation, see the [original file](./docs/copied/modular-architecture.md), copied from one of the internal projects.
+
+> [!TIP]
+> The word “entered” here has a made-up meaning: “having entries” or “having entry points.”
+
+Here’s a real example snippet from an internal file, `src/reader/Reader.tsx` (the `@/reader` module). Note that there are no `index` files used—the last path segments are never directories.
 
 ```typescript
 import { Box, Grid } from '@/ui/entry.core'
@@ -18,8 +23,8 @@ import { Preferences as ReaderPreferences, useViewStore } from './preferences/en
 import { useWakeLock } from './wake-lock.hook'
 ```
 
-> [!NOTE]
-> This is used together with `@trivago/prettier-plugin-sort-imports` for better development experience.
+> [!TIP]
+> Internally, this is used together with `@trivago/prettier-plugin-sort-imports` for even better development experience!
 
 ## Installation
 
