@@ -26,6 +26,45 @@ import { useWakeLock } from './wake-lock.hook'
 > [!TIP]
 > Internally, this is used together with `@trivago/prettier-plugin-sort-imports` for even better development experience!
 
+Other benefits include:
+
+1. **Simple reasoning** about **all** of a module's entry points (gathered more or less in one place and sorted alphabetically).  
+2. Leveraging the _power of plaintext_ with Unix-like tooling.  
+
+For example, with `tree`, we can produce output similar to the following:
+
+```bash
+$ cd src
+$ tree -P '*<'"$SOME_PATTERN"'>*'
+.
+├── profile
+│   ├── avatar
+│   │   ├── (...)
+│   │   ├── entry.ts
+│   │   └── (...)
+│   ├── badge.hooks.ts
+│   ├── (...)
+│   ├── entry..children.ts     # ⤵️ Internal downstream-only API
+│   ├── entry..so.children.ts  # ⤵️ Internal downstream-only API
+│   ├── entry.cs.ts            # ✅ Public API
+│   ├── entry.so.ts            # ✅ Public API
+│   ├── entry.ts               # ✅ Public API
+│   ├── (...)
+│   └── PasswordForm.tsx
+├── router
+│   ├── entry.so.ts
+│   └── entry.ts
+├── trpc
+│   ├── entry.cs.ts
+│   └── entry.so.ts
+└── ui
+    ├── entry.controls.ts
+    ├── entry.flags.tsx
+    ├── entry.layout.ts
+    ├── entry.icons.tsx
+    └── entry.semantics.ts
+```
+
 ## Installation
 
 ```bash
